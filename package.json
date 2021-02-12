@@ -1,0 +1,14 @@
+{
+  "name": "note-taking-app",
+  "version": "1.0.0",
+  "description": "a note-taking application in MERN",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "TS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
