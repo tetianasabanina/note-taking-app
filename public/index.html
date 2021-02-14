@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1", />
+        <link rel="stylesheet" href="style.css" />
+        <title>Notepad</title>
+    </head>
+    <body>
+        <!-- <p>Hello World! I hope you are well!</p> -->
+        <h2>-Notepad-</h2><br/>
+        <form id="user_form">
+            <field>
+                <label>SEARCH NOTE:</label><br/>
+                <input id="noteId" type="text" name="noteId" placeholder="note id"/>
+                <!-- <input id="get_request" type="text" placeholder="get notes"/> -->
+                <button id="getButton" name="getButton" value="submit" type="submit">Get Notes</button><br/>
+            </field>
+        </form>
+
+        <form id="user_form_post">
+            <field>
+                <label>ADD A NEW NOTE:</label><br/>
+                <label>note title</label>
+                <input id="noteInput" type="text" name="noteTitle" placeholder="post note" maxlength=15 />
+                <label>note description</label>
+                <input id="descriptionInput" type="text" name="noteDescription" placeholder="post description" maxlength=100 />
+                <button id="postButton" method="POST" >POST</button>
+                <br/>
+            </field>
+        </form>
+
+        <form id="user_form_delete">
+            <field>
+                <label>DELETE:</label><br />
+                <label>note Id:</label>
+                <input id="noteId" type="text" name="noteId" placeholder="note id" />
+                <button>Delete Note</button>
+            </field>
+        </form>
+
+        <form id="user_form_put">
+            <field>
+                <label>UPDATE NOTE:</label><br />
+                <label>note id:</label>
+                <input id="noteId" type="text" name="noteId" placeholder="note id" />
+                <label>note title:</label> 
+                <input id="noteInput" type="text" name="noteTitle" placeholder="new title" maxlength=15 />
+                <label>note description:</label>
+                <input id="descriptionInput" type="text" name="noteDescription" placeholder="new description" maxlength=100/>
+                
+                <button id="putButton" name="putButton" method="PUT" >Update note</button><br />
+            </field>
+        </form>
+        <h2>Your notes:</h2>
+        <div id="results">
+
+        </div>
+        <script src="./api.js"></script>
+    </body>
+</html>
