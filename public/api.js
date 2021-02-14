@@ -3,7 +3,7 @@ searchButton.addEventListener('submit', getRequest);
 
 function getRequest(event) {
     event.preventDefault();
-    const search = event.target.searchValue.value;
+    const search = (event.target.searchValue.value).toLowerCase();
     console.log('search: ', search);
     fetch(`/notes`)
         .then(response => response.json())
